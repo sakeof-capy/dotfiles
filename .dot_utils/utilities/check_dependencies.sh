@@ -7,7 +7,7 @@ DEPENDENCIES=$(cat ${SCRIPT_DIR}/dependencies)
 
 for dep in ${DEPENDENCIES}; do
     if ! command -v "$dep" > /dev/null 2>&1; then
-        echo "Missing dependency: $dep. Run sudo install_dependencies.sh first."
+        echo "Missing dependency: $dep. Run sudo install_dependencies.sh first." >&2
         exit 1
     fi
 done

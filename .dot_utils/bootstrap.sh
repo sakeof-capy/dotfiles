@@ -5,7 +5,7 @@ set -e
 SCRIPT_DIR="$(dirname "$(realpath "$0")")"
 
 if [ -d "$HOME/.dotfiles" ]; then
-    echo "~/.dotfiles already exists. Remove it first with: rm -rf ~/.dotfiles"
+    echo "~/.dotfiles already exists. Remove it first with: rm -rf ~/.dotfiles" >&2
     exit 1
 fi
 

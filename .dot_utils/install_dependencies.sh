@@ -1,8 +1,9 @@
-#!/usr/bin/env bash
+#!/usr/bin/env sh
 
-set -eo pipefail
+set -e
 
-DEPENDENCIES=$(cat ./utilities/dependencies)
+SCRIPT_DIR="$(dirname "$(realpath "$0")")"
+DEPENDENCIES=$(cat ${SCRIPT_DIR}/utilities/dependencies)
 
 apt update
 apt install -y ${DEPENDENCIES}

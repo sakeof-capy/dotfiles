@@ -1,12 +1,14 @@
-#!/usr/bin/env bash
+#!/usr/bin/env sh
 
-set -eo pipefail
+set -e
+
+SCRIPT_DIR="$(dirname "$(realpath "$0")")"
 
 # Check if all dependencies are installed
-source <(curl -s https://raw.githubusercontent.com/sakeof-capy/dotfiles/master/utilities/check_dependencies.sh)
+"$SCRIPT_DIR/utilities/check_dependencies.sh"
 
 # Sourcing aliases, so that 'dotfiles' alias is available
-source <(curl -s https://raw.githubusercontent.com/sakeof-capy/dotfiles/master/.zsh/aliases.zsh)
+. "$SCRIPT_DIR/zsh/aliases.zsh"
 
 git clone --bare git@github.com:sakeof-capy/dotfiles.git ~/.dotfiles
 

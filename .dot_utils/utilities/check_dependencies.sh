@@ -1,6 +1,9 @@
-#!/usr/bin/env bash
+#!/usr/bin/env sh
 
-DEPENDENCIES=$(cat ./dependencies)
+set -e
+
+SCRIPT_DIR="$(dirname "$(realpath "$0")")"
+DEPENDENCIES=$(cat ${SCRIPT_DIR}/dependencies)
 
 for dep in ${DEPENDENCIES}; do
     if ! command -v "$dep" > /dev/null 2>&1; then
@@ -8,3 +11,5 @@ for dep in ${DEPENDENCIES}; do
         exit 1
     fi
 done
+
+echo "All dependencies satisfied."

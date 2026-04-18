@@ -36,12 +36,17 @@ exec zsh
 
 ---
 
-Alternatively, run all steps in a single command:
+Alternatively, installation in a single command:
 
 ```sh
 git clone git@github.com:sakeof-capy/dotfiles.git /tmp/dotfiles && \
 sudo sh /tmp/dotfiles/.dot_utils/install_dependencies.sh        && \
 sh /tmp/dotfiles/.dot_utils/bootstrap.sh                         ; \
-rm -rf /tmp/dotfiles                                            && \
+rm -rf /tmp/dotfiles
+```
+
+Switch to `zsh`:
+
+```sh
 exec zsh
 ```

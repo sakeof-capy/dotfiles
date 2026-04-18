@@ -28,6 +28,12 @@ sh /tmp/dotfiles/.dot_utils/bootstrap.sh
 rm -rf /tmp/dotfiles
 ```
 
+### 5. Switch to zsh
+
+```sh
+exec zsh
+```
+
 ---
 
 Alternatively, run all steps in a single command:
@@ -36,5 +42,6 @@ Alternatively, run all steps in a single command:
 git clone git@github.com:sakeof-capy/dotfiles.git /tmp/dotfiles && \
 sudo sh /tmp/dotfiles/.dot_utils/install_dependencies.sh        && \
 sh /tmp/dotfiles/.dot_utils/bootstrap.sh                         ; \
-rm -rf /tmp/dotfiles
+rm -rf /tmp/dotfiles                                            && \
+exec zsh
 ```

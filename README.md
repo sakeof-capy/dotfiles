@@ -7,13 +7,15 @@ Personal dotfiles managed with a bare git repository.
 ### 1. Install dependencies (if needed)
 
 ```bash
-bash <(curl -s https://raw.githubusercontent.com/sakeof-capy/dotfiles/master/install_dependencies.sh)
+git clone git@github.com:sakeof-capy/dotfiles.git /tmp/dotfiles
+sudo sh /tmp/dotfiles/install_dependencies.sh
 ```
 
 ### 2. Bootstrap
 
 ```bash
-bash <(curl -s https://raw.githubusercontent.com/sakeof-capy/dotfiles/master/bootstrap.sh)
+git clone git@github.com:sakeof-capy/dotfiles.git /tmp/dotfiles
+sh /tmp/dotfiles/bootstrap.sh
 ```
 
-This will clone the dotfiles repository, apply all configurations and set zsh as the default shell.
+> Note: if you already cloned the repo for step 1, skip the clone in step 2.

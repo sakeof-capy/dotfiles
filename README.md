@@ -35,6 +35,6 @@ Alternatively, run all steps in a single command:
 ```sh
 git clone git@github.com:sakeof-capy/dotfiles.git /tmp/dotfiles && \
 sudo sh /tmp/dotfiles/.dot_utils/install_dependencies.sh        && \
-sh /tmp/dotfiles/.dot_utils/bootstrap.sh                        && \
+sh /tmp/dotfiles/.dot_utils/bootstrap.sh                         ; \
 rm -rf /tmp/dotfiles
 ```

@@ -11,11 +11,11 @@ promptinit
 prompt adam1
 eval "$(dircolors -b)"
 
-source ~/.dot_includes/.zsh/aliases.zsh
-source ~/.dot_includes/.zsh/history.zsh
-source ~/.dot_includes/.zsh/completion.zsh
-source ~/.dot_includes/.zsh/options.zsh
-source ~/.dot_includes/.zsh/plugins.zsh
+source ~/.dot_utils/.zsh/aliases.zsh
+source ~/.dot_utils/.zsh/history.zsh
+source ~/.dot_utils/.zsh/completion.zsh
+source ~/.dot_utils/.zsh/options.zsh
+source ~/.dot_utils/.zsh/plugins.zsh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

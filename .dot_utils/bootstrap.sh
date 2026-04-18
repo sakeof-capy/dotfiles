@@ -4,6 +4,11 @@ set -e
 
 SCRIPT_DIR="$(dirname "$(realpath "$0")")"
 
+if [ -d "$HOME/.dotfiles" ]; then
+    echo "~/.dotfiles already exists. Remove it first with: rm -rf ~/.dotfiles"
+    exit 1
+fi
+
 # Check if all dependencies are installed
 "$SCRIPT_DIR/utilities/check_dependencies.sh"
 

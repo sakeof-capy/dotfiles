@@ -19,3 +19,5 @@ git clone --bare git@github.com:sakeof-capy/dotfiles.git ~/.dotfiles
 
 dotfiles checkout -f
 dotfiles config status.showUntrackedFiles no
+
+echo "Done! Run 'exec zsh' or re-login to start using the installed shell."

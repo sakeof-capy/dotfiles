@@ -26,6 +26,12 @@ sh /path/to/dotfiles/.dot_utils/bootstrap.sh
 exec zsh
 ```
 
+or change your default shell:
+
+```sh
+chsh -s $(which zsh)
+```
+
 ---
 
 Alternatively, installation in a single command:
@@ -41,4 +47,10 @@ Switch to `zsh`:
 
 ```sh
 exec zsh
+```
+
+Or change your default shell to `zsh`:
+
+```sh
+chsh -s $(which zsh)
 ```

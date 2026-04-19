@@ -4,6 +4,7 @@ set -e
 
 BACKUP_ID=$(date +%Y%m%d_%H%M%S)
 SCRIPT_DIR="$(dirname "$(realpath "$0")")"
+REMOTE_URL=$(git -C "$SCRIPT_DIR" remote get-url origin)
 BRANCH=$(git -C "$SCRIPT_DIR" rev-parse --abbrev-ref HEAD)
 
 dotfiles() {
@@ -19,7 +20,7 @@ backup() {
 
 # Backup and clone dotfiles repo
 backup "$HOME/.dotfiles"
-git clone --bare git@github.com:sakeof-capy/dotfiles.git ~/.dotfiles
+git clone --bare "$REMOTE_URL" "$HOME/.dotfiles"
 
 # Back up all files that dotfiles would overwrite
 TRACKED=$(dotfiles ls-tree -r "$BRANCH" --name-only)

@@ -4,31 +4,23 @@ Personal dotfiles managed with a bare git repository.
 
 ## Installation
 
-### 1. Clone the repo to `/tmp`
+### 1. Clone the repo
 
-```sh
-git clone git@github.com:sakeof-capy/dotfiles.git /tmp/dotfiles
-```
+Clone this repo to any location except `~/.dotfiles`.
 
 ### 2. Install dependencies (if needed)
 
 ```sh
-sudo sh /tmp/dotfiles/.dot_utils/install_dependencies.sh
+sudo sh /path/to/dotfiles/.dot_utils/install_dependencies.sh
 ```
 
 ### 3. Bootstrap
 
 ```sh
-sh /tmp/dotfiles/.dot_utils/bootstrap.sh
+sh /path/to/dotfiles/.dot_utils/bootstrap.sh
 ```
 
-### 4. Cleanup
-
-```sh
-rm -rf /tmp/dotfiles
-```
-
-### 5. Switch to zsh
+### 4. Switch to zsh
 
 ```sh
 exec zsh
